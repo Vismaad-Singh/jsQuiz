@@ -8,7 +8,7 @@ let questions = [
         "Random Access Memory",
         "Randomely Access Memory",
         "Run Aceapt Memory",
-        // "None of these"
+        "None of these"
       ]
     },
     {
@@ -43,14 +43,12 @@ window.onload = function() {
 };
 
 function next() {
-
-   
-  if (question_count == questions.length - 1) {
+  if (question_count == questions.length - 1) {       //last question
     sessionStorage.setItem("time", time);
     clearInterval(mytime);
     location.href = "end.html";
   }
-  console.log(question_count);
+  // console.log(question_count);
 
   let user_answer = document.querySelector("li.option.active").innerHTML;
   
@@ -63,7 +61,7 @@ function next() {
     points =0;
     sessionStorage.setItem("points", points);
   }
-  console.log(points);
+  // console.log(points)
 
   question_count++;
   show(question_count);
